@@ -36,6 +36,7 @@ class MyApp extends StatelessWidget {
         // This works for code too, not just values: Most code changes can be
         // tested with just a hot reload.
         colorScheme: ColorScheme.fromSeed(seedColor: const Color.fromRGBO(4, 0, 255, 1)),
+        scaffoldBackgroundColor: const Color.fromRGBO(2, 3, 4, 0)
       ),
       home: const MyHomePage(title: 'Flutter Demo Home Page'),
     );
@@ -95,6 +96,7 @@ class _MyHomePageState extends State<MyHomePage> {
       body: Center(
         // Center is a layout widget. It takes a single child and positions it
         // in the middle of the parent.
+        
         child: Column(
           // Column is also a layout widget. It takes a list of children and
           // arranges them vertically. By default, it sizes itself to fit its
