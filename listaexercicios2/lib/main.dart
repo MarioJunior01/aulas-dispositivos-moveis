@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:listaexercicios2/Exercicio1.dart';
 import 'package:listaexercicios2/Exercicio2.dart';
+import 'package:listaexercicios2/Exercicio3.dart';
 
 void main() {
   runApp(const MyApp());
@@ -33,7 +34,7 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         
       ),
-      home: const Exercicio2(),
+      home: const Exercicio3(),
       debugShowCheckedModeBanner: false,
     );
   }
