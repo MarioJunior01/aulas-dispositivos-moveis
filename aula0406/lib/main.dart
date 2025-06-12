@@ -1,4 +1,5 @@
-import 'package:aula0406/provarec.dart';
+import 'package:componentes/adota.dart';
+import 'package:componentes/provarec.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -9,15 +10,15 @@ class MyApp extends StatelessWidget {
   const MyApp({super.key});
 
   @override
-  Widget build(BuildContext context) {
+  Widget build(BuildContext context) { 
     return MaterialApp(
-      title: 'Flutter Demo',
+      title: 'Componentes',
       theme: ThemeData(
-      
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
+        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepOrange),
       ),
-      home: ProvaRec(),
+      home: Adota(),
       debugShowCheckedModeBanner: false,
     );
   }
 }
+

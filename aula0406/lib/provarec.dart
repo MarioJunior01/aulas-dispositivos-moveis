@@ -38,11 +38,11 @@ class ProvaRec extends StatelessWidget {
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
-                        Icon(Icons.star, color: Colors.amber, size: 24),
-                        Icon(Icons.star, color: Colors.amber, size: 24),
-                        Icon(Icons.star, color: Colors.amber, size: 24),
-                        Icon(Icons.star, color: Colors.amber, size: 24),
-                        Icon(Icons.star_half, color: Colors.amber, size: 24),
+                        Icon(Icons.star, color: Colors.amber, size: 20),
+                        Icon(Icons.star, color: Colors.amber, size: 20),
+                        Icon(Icons.star, color: Colors.amber, size: 20),
+                        Icon(Icons.star, color: Colors.amber, size: 20),
+                        Icon(Icons.star_half, color: Colors.amber, size: 20),
                       ],
                     ),
                   ),
@@ -59,20 +59,18 @@ class ProvaRec extends StatelessWidget {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  const Section(title: "Ingredientes", itens: ["- Cenouras, Ovos, Óleo, Açúcar, Farinha, Fermento","- Cobertura: Açúcar, Chocolate em Pó, Manteiga e Leite.", "NNNAAAAAAAAAAAAAAAAAA"]),
-                  Padding(
-                    padding: const EdgeInsets.all(8.0),
-                    child: Text(
-                      "Modo de Preparo:",
-                      style: TextStyle(
-                        color: seedColor.primaryColor,
-                        fontSize: 22,
-                        fontWeight: FontWeight.bold,
-                      ),
-                    ),
+                  const Section(
+                    title: "Ingredientes",
+                    itens: [
+                      "- Cenouras, Ovos, Óleo, Açúcar, Farinha, Fermento",
+                      "- Cobertura: Açúcar, Chocolate em Pó, Manteiga e Leite.",
+                    ],
                   ),
-                  Text(
-                    " 1. Bata enouras, Ovos, Açúcar e óleo no liquidificador\n 2. Misture os líquidos com açúcar e farinha. Adicione o fermento por último\n3. Asse em forno médio a (180 graus) por 30-40 minutos \n4. Para a cobertura: cozinhe todos os ingredientes em fogo baixo até engrossar. Despeje sobre o bolo quente.",
+                  const Section(
+                    title: "Modo de preparo",
+                    itens: [
+                      " 1. Bata enouras, Ovos, Açúcar e óleo no liquidificador\n 2. Misture os líquidos com açúcar e farinha. Adicione o fermento por último\n3. Asse em forno médio a (180 graus) por 30-40 minutos \n4. Para a cobertura: cozinhe todos os ingredientes em fogo baixo até engrossar. Despeje sobre o bolo quente.",
+                    ],
                   ),
                 ],
               ),
@@ -107,9 +105,8 @@ class Section extends StatelessWidget {
             ),
           ),
         ),
-       for (var item in itens) Text(item),
+        for (var item in itens) Text(item),
       ],
-      
     );
   }
 }
