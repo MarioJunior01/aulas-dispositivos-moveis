@@ -1,5 +1,4 @@
 import 'package:componentes/adota.dart';
-import 'package:componentes/provarec.dart';
 import 'package:flutter/material.dart';
 
 void main() {

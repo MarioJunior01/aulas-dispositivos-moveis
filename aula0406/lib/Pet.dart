@@ -6,7 +6,8 @@ class Pet{
 
 Pet({required this.nome, required this.foto, required this.idade, required this.raca, });
 
-String getTextoIdade(){
+String getTextoIdade()
+{
   if (idade > 1) {
     return "$idade ano";
     
