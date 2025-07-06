@@ -8,59 +8,62 @@ class Atividade1 extends StatefulWidget {
 }
 
 class _Atividade1State extends State<Atividade1> {
+  final textControllerA = TextEditingController();
+  final textControllerB = TextEditingController();
+  double resultado = 0;
   @override
   Widget build(BuildContext context) {
-    final _textControllerA = TextEditingController();
-    final _textControllerB = TextEditingController();
     double numero1 = 0;
     double numero2 = 0;
-    double resultado = 0;
 
     return Scaffold(
       appBar: AppBar(title: Text("Atividade 1")),
       body: Column(
-        mainAxisAlignment: MainAxisAlignment.start,
+        spacing: 40,
         children: [
           Padding(
-            padding: const EdgeInsets.all(8.0),
-            child: SizedBox(
-              width: 100,
+            padding: const EdgeInsets.symmetric(horizontal: 80),
+            child: Container(
+              color: const Color.fromARGB(255, 255, 255, 255),
               child: TextFormField(
-                decoration: const InputDecoration(labelText: "Número 1"),
+                decoration: const InputDecoration(
+                  labelText: "Número 1",
+                  labelStyle: TextStyle(color: Colors.black),
+                ),
                 keyboardType: TextInputType.number,
-                controller: _textControllerA,
+                controller: textControllerA,
               ),
             ),
           ),
 
           Padding(
-            padding: const EdgeInsets.all(8.0),
-            child: SizedBox(
-              width: 100,
+            padding: const EdgeInsets.symmetric(horizontal: 80),
+            child: Container(
+              color: const Color.fromARGB(255, 255, 255, 255),
               child: TextFormField(
-                decoration: const InputDecoration(labelText: "Número 2"),
+                decoration: const InputDecoration(
+                  labelText: "Número 2",
+                  labelStyle: TextStyle(color: Colors.black),
+                ),
                 keyboardType: TextInputType.number,
-                controller: _textControllerB,
+                controller: textControllerB,
               ),
             ),
           ),
-          TextButton(
+          ElevatedButton(
             onPressed: () {
               setState(() {
-                numero1 = double.parse(_textControllerA.text);
-                numero2 = double.parse(_textControllerB.text);
-                resultado= numero1+numero2;
-                
-              });
-              
-            },
+                numero1 = double.parse(textControllerA.text);
+                numero2 = double.parse(textControllerB.text);
 
+                resultado = numero1 + numero2;
+              });
+            },
             child: Text("SOMAR"),
           ),
-
           Text(
-            "Resultado é = "
-            '$resultado',
+            "O resultado é: $resultado ",
+            style: TextStyle(color: Colors.red, fontSize: 40),
           ),
         ],
       ),

@@ -16,6 +16,7 @@ class MyApp extends StatelessWidget {
       title: 'Componentes',
       theme: ThemeData(
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepOrange),
+        scaffoldBackgroundColor: const Color.fromARGB(255, 97, 231, 255)
       ),
       home: Atividade1(),
       debugShowCheckedModeBanner: false,
